@@ -7,13 +7,11 @@ Este es un generador de contraseñas aleatorias con evaluación de seguridad inc
 ## 📸 Captura de pantalla
 ![image](https://github.com/user-attachments/assets/62a23a64-62f3-40c3-b72f-bb19e1d09b32)
 
-![Captura de pantalla del generador](.assets\img\image.png) 
-
 ---
 
 ## 🚀 Demo online
 
-👉 [Probar el generador en GitHub Pages](https://tuusuario.github.io/nombre-del-repo/)  
+👉 [Probar el generador en GitHub Pages]( https://facundobuitrago.github.io/PasswordGenerator/)  
 
 ---
 
