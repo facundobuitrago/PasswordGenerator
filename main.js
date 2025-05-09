@@ -1,4 +1,5 @@
 // Elementos del DOM
+
 let cantidad = document.getElementById('cantidad');
 let botonGenerar = document.getElementById('generar');
 let botonLimpiar = document.getElementById('limpiar');
@@ -23,19 +24,16 @@ function generar() {
         password += caracter;
     }
 
-    // console.log("La contraseña es " + password); // Para desarrollo
     contrasena.value = password;
     evaluarSeguridad(password);
 }
 
-// Limpia el campo de contraseña
 function limpiar() {
     contrasena.value = "";
     nivelDeSeguridad.textContent = "Seguridad: N/A";
     nivelDeSeguridad.className = "seguridad";
 }
 
-// Evalúa la seguridad de la contraseña
 function evaluarSeguridad(password) {
     let seguridad = "Débil";
     nivelDeSeguridad.className = "seguridad debil";
@@ -51,6 +49,5 @@ function evaluarSeguridad(password) {
     nivelDeSeguridad.textContent = "Seguridad: " + seguridad;
 }
 
-// Event listeners (buena práctica)
 botonGenerar.addEventListener('click', generar);
 botonLimpiar.addEventListener('click', limpiar);
