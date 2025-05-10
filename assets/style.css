@@ -6,14 +6,14 @@
 }
 
 body {
-    background: linear-gradient(#1354a5 0%,
-            #041832 33.33%,
-            #041832 66.67%,
-            #01080e 100%);
-    height: 100vh;
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Inter', sans-serif;
+    padding: 1rem;
+    position: relative;
 }
 
 body::before {
@@ -22,205 +22,138 @@ body::before {
     background-position: right;
     background-size: cover;
     content: "";
-    display: block;
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0.4;
+    opacity: 0.2;
+    z-index: -1;
 }
 
 .container {
-    width: 80%;
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 24px;
-    border: 1px solid #1875e8;
-    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
-    background-image: url("img/Ruido.png");
-    background-size: 100% 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.container__contenido {
-    display: flex;
-    align-items: center;
-    position: relative;
     width: 100%;
-}
-
-.container__informacion {
-    flex: 1;
-    padding: 3rem;
+    max-width: 900px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    background-image: url("img/Ruido.png");
+    background-size: cover;
 }
 
 h1 {
-    font-family: "Chakra Petch", sans-serif;
-    font-size: 72px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    padding: 2rem;
-}
-
-.container__texto {
-    margin: 12px 0;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .container__texto-azul {
-    color: #1875e8;
-    display: block;
+    color: #1875E8;
 }
 
 .container__campo {
     display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    margin: 30px;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .texto__parrafo {
-    color: #fff;
-    font-family: "Inter";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-left: 10px;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
-.container__input {
-    width: 148px;
-    height: 72px;
-    border-radius: 16px;
-    background-color: #fff;
+.container__input,
+.container__contrasena {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
     border: none;
+    border-radius: 16px;
     color: #535353;
-    padding: 2rem;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: "Inter", sans-serif;
+}
+
+.container__contrasena {
+    color: #1875E8;
+    margin-top: 1rem;
 }
 
 .botonGenerar,
 .botonLimpiar {
-    color: white;
-    font-size: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
     border: none;
-    background-color: #1875e8;
-    padding: 1rem 1.5rem;
     border-radius: 16px;
-    width: 243px;
-    height: 72px;
-    box-shadow: 0px 0px 20px 0px rgba(24, 117, 232, 0.5);
+    background-color: #1875E8;
+    color: white;
     cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(24, 117, 232, 0.5);
+    transition: background 0.3s ease;
 }
 
-.container__contrasena {
-    width: 496px;
-    height: 72px;
-    border-radius: 16px;
-    background-color: #fff;
-    border: none;
-    color: #1875e8;
-    margin: 50px;
-    padding: 2rem;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: "Inter", sans-serif;
+.botonGenerar:hover,
+.botonLimpiar:hover {
+    background-color: #1454a0;
 }
 
 .seguridad {
-    color: #fff;
-    font-family: "Inter", sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.5;
-    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.75rem;
     border-radius: 8px;
-    margin-left: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    display: table-cell;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
 }
 
 .seguridad.debil {
-    background: linear-gradient(135deg, #ff4b4b, #ff0000);
-    /* Gradiente rojo */
+    background: linear-gradient(135deg, #FF4B4B, #FF0000);
     box-shadow: 0px 4px 15px rgba(255, 75, 75, 0.5);
-    /* Sombra roja */
 }
 
 .seguridad.media {
-    background: linear-gradient(135deg,
-            #ffc107,
-            #ffd54f);
-    /* Gradiente amarillo */
+    background: linear-gradient(135deg, #FFC107, #FFD54F);
     box-shadow: 0px 4px 15px rgba(255, 193, 7, 0.5);
-    /* Sombra amarilla */
 }
 
 .seguridad.fuerte {
-    background: linear-gradient(135deg, #28a745, #5cd859);
-    /* Gradiente verde */
+    background: linear-gradient(135deg, #28A745, #5CD859);
     box-shadow: 0px 4px 15px rgba(40, 167, 69, 0.5);
-    /* Sombra verde */
 }
 
-@media (max-width: 1024px) {
+/* Responsive: Tablets y celulares */
+@media (max-width: 768px) {
     h1 {
-        font-size: 48px;
-        padding: 1rem;
+        font-size: 2rem;
     }
 
     .container {
-        flex-direction: column;
-        width: 95%;
-        padding: 2rem;
-    }
-
-    .container__campo {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-        margin: 1rem 0;
+        padding: 1.5rem;
     }
 
     .container__input,
+    .container__contrasena,
     .botonGenerar,
-    .botonLimpiar,
-    .container__contrasena {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        padding: 1rem;
-        font-size: 1.25rem;
-    }
-
-    .container__contrasena {
-        margin: 2rem 0;
-    }
-
-    .seguridad {
-        font-size: 1.25rem;
-        margin: 1rem 0 0 0;
-        display: block;
-        text-align: center;
-    }
-}
-
-@media (max-width: 600px) {
-    h1 {
-        font-size: 36px;
+    .botonLimpiar {
+        font-size: 1rem;
     }
 
     .texto__parrafo {
-        font-size: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .seguridad {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .container {
+        padding: 1rem;
     }
 }
